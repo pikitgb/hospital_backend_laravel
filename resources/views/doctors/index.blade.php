@@ -21,7 +21,7 @@
               <td>{{ $doctor->name }}</td>
               <td>{{ $doctor->lastname }}</td>
               <td>
-                <a href="" class="ui primary button">Show</a>
+                <a href="{{  url('doctors', ['id' => $doctor->id]) }}" class="ui primary button">Show</a>
               </td>
               <td>
                 <a href="" class="ui orange button">Edit</a>

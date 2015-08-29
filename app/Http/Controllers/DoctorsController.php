@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Doctor;
+//use Carbon\Carbon;
 
 class DoctorsController extends Controller
 {
@@ -17,7 +18,13 @@ class DoctorsController extends Controller
      */
     public function index()
     {
-      //Doctor::create(['name' => "Juan Ricardo", 'lastname' => "Gutierrez"]);
+      //Doctor::create(['name' => "Juan Ricardo", 'lastname' => "Gutierrez",
+        //'latitude'=> '120.0333', 'longitude' => '29.222202',
+        //'age'=> 33, 'experience_years_count' => 12, 'picture' => 'img/doctor.png',
+        //'attented_cases_number' => 369,  'current_room_number' => 65,
+        //'last_message_received' => "Doctor Juan, go inmediatly to the Emergency room",
+        //'last_time_reported' => "2015-08-29 10:10:10", 'attended_patients_counter_today'=> 12
+      //]);
       $doctors = Doctor::all();
       return view('doctors.index', ['doctors' => $doctors]);
     }
@@ -51,7 +58,8 @@ class DoctorsController extends Controller
      */
     public function show($id)
     {
-        //
+      $doctor = Doctor::find($id);
+      return view('doctors.show', ['doctor' => $doctor]);
     }
 
     /**
