@@ -26,7 +26,9 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    //'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'mongodb'),
+
 
     /*
     |--------------------------------------------------------------------------
@@ -45,6 +47,13 @@ return [
     */
 
     'connections' => [
+
+        'mongodb' => array(
+            'driver'   => 'mongodb',
+            'host'     => env('DB_HOST', 'localhost'),
+            'port'     => env('DB_PORT', 27017),
+            'database' => env('DB_DATABASE', 'laravel_hospital_demo'),
+        ),
 
         'sqlite' => [
             'driver'   => 'sqlite',
