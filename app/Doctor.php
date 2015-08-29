@@ -8,5 +8,5 @@ use Jenssegers\Mongodb\Model as Eloquent;
 
 class Doctor extends Eloquent
 {
-    //
+  protected $fillable = ['name', 'latitude', 'longitude', 'lastname'];
 }

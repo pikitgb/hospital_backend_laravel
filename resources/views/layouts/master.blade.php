@@ -123,67 +123,34 @@
 
         });
   </script>
-
 </head>
 
 
 <body class="pushable">
 
-  @section('menu')
-    <!-- Following Menu -->
-    <div class="ui large top fixed menu transition hidden">
-      <div class="ui container">
-        <a class="active item">Home</a>
-        <div class="right menu">
-          <div class="item">
-            <a class="ui button">Log in</a>
-          </div>
-          <div class="item">
-            <a class="ui button">Close</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  @show
-
-
-  <!-- Page Contents -->
   <div class="pusher">
-    @section('presentation')
-      <div class="ui inverted vertical masthead center aligned segment">
-
-          <div class="ui container">
-            <div class="ui large secondary inverted pointing menu">
-              <a class="toc item">
-                <i class="sidebar icon"></i>
-              </a>
-              <a class="active item">Home</a>
-              <div class="right item">
-                <a class="ui inverted button">Log in</a>
-                <a class="ui inverted button">Close</a>
-              </div>
+    <div class="ui inverted vertical masthead aligned segment">
+      @section('menu-logout')
+        <div class="ui container center">
+          <div class="ui large secondary inverted pointing menu">
+            <a class="toc item">
+              <i class="sidebar icon"></i>
+            </a>
+            <a class="active item">Home</a>
+            <div class="right item">
+              <a class="ui inverted button">Log in</a>
+              <a class="ui inverted button">Close Session</a>
             </div>
           </div>
+        </div>
+      @show
 
-          <div class="ui text container">
-            <br />
-            <br />
-            <br />
-            <img src="{{ asset('img/background.png') }}" style="height: 300px; margin-left: -50px;">
-            <h1 class="ui inverted header" style="margin-top: 20px;">
-              DoctorTck - Admin
-            </h1>
-            <h2>Welcome to the Demo App DoctorTck Administration</h2>
-            <div class="ui huge primary button">Login<i class="right arrow icon"></i></div>
-          </div>
-      </div>
-    @show
+      @yield('presentation')
 
+      @yield('content')
 
-    @section('content')
+    </div>
 
-    @show
 
     @section('footer')
       <div class="ui inverted vertical footer segment">
@@ -212,7 +179,6 @@
         </div>
       </div>
     @show
-
   </div>
 
 </body>
