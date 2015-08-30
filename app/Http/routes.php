@@ -11,8 +11,23 @@
 |
 */
 
+// Root path
 Route::get('/', function () {
     return view('home.index');
 });
 
+// Resouce administration
 Route::resource('doctors', 'DoctorsController');
+Route::resource('managers', 'ManagersController');
+
+// Authentication routes...
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
+
+// Registration routes...
+Route::get('auth/register', 'Auth\AuthController@getRegister');
+Route::post('auth/register', 'Auth\AuthController@postRegister');
+
+// When user login
+Route::get('/dashboard', 'HomeController@dashboard');

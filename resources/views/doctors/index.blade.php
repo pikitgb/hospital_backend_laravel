@@ -6,6 +6,7 @@
       <br />
       <br />
       <h1> Listing Doctors </h1>
+      <hr />
       <table class="ui celled table">
         <thead>
           <tr>

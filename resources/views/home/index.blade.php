@@ -1,15 +1,17 @@
 @extends('layouts.master')
 
 @section('presentation')
+
+
   <center>
   <div class="ui container center">
     <br />
     <br />
     <img src="{{ asset('img/background.png') }}" style="height: 300px;">
     <h1 class="ui inverted header" style="margin-top: 20px;">
-      DoctorTck - Admin
+      HospitalCity - Admin
     </h1>
-    <h2>Welcome to the Demo App DoctorTck Administration</h2>
+    <h2>Welcome to the Demo App HospitalCity Administration</h2>
     <div class="ui huge primary button">Login<i class="right arrow icon"></i></div>
     <br />
     <br />
@@ -23,7 +25,7 @@
       <div class="ui middle aligned stackable grid container">
         <div class="row">
           <div class="eight wide column">
-            <h3 class="ui header">See the current GPS position for Doctors</h3>
+            <h3 class="ui header">See the current GPS position for Doctors traveling in our city</h3>
             <p>DoctorTck show the GPS position for doctors using Google Maps and other technologies.</p>
             <h3 class="ui header">Notify to doctors</h3>
             <p>As a manager send messages and push notifications to the doctor Android App</p>

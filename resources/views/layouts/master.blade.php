@@ -98,6 +98,7 @@
   <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
   <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.0.8/semantic.js"></script>
+  <script type="text/javascript" src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false" charset="utf-8"></script>
 
   <script>
     $(document)
@@ -136,10 +137,14 @@
             <a class="toc item">
               <i class="sidebar icon"></i>
             </a>
-            <a class="active item">Home</a>
+            <a class="active item" href="{{ url('/') }}">Home</a>
             <div class="right item">
-              <a class="ui inverted button">Log in</a>
-              <a class="ui inverted button">Close Session</a>
+              @if (!Auth::check())
+                <a class="ui inverted button" href="/auth/login">Log in</a>
+              @endif
+              @if (Auth::check())
+                <a class="ui inverted button" href="/auth/logout">Log out</a>
+              @endif
             </div>
           </div>
         </div>
@@ -170,8 +175,8 @@
               </div>
             </div>
             <div class="seven wide column">
-              <h4 class="ui inverted header">DoctorTck</h4>
-              <p>Welcome to the DoctorTck Administration Demo App. This app show how to use PHP, Laravel5, NodeJS, AngularJS, Express, Semantic UI and MongoDB. 
+              <h4 class="ui inverted header">HospitalCity</h4>
+              <p>Welcome to the HospitalCity Administration Demo App. This app show how to use PHP, Laravel5, NodeJS, AngularJS, Express, Semantic UI and MongoDB. 
                 <a href="/home/cloneit">Click here for more information</a>
               </p>
             </div>

@@ -6,6 +6,7 @@
       <br />
       <br />
       <h1> Doctor details - {{ $doctor->name }} </h1>
+      <hr />
 
       <div class="ui two column grid container">
 
@@ -34,8 +35,8 @@
         </div>
 
         <div class="twelve wide column" style= "">
-          <div class="ui piled segment">
 
+          <div class="ui piled segment">
             <div class="ui statistics">
               <div class="statistic">
                 <div class="value">
@@ -63,8 +64,30 @@
                 </div>
               </div>
             </div>
+
+            <div class="">
+              <div id="map" style="width: 780px; height: 500px; border-radius: 10px"></div>
+
+              <script type="text/javascript">
+                 var map = new GMap2(document.getElementById("map"));
+                 map.setCenter(new GLatLng(51.49, -0.12), 1000);
+              </script>
+            </div>
+
+
           </div>
+
+
+
         </div>
+
+
+
+
+
+
+
+
    </div>
 
     </div>
