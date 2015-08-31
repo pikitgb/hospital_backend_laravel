@@ -14,15 +14,15 @@
 
           <div class="ui card">
             <div class="image">
-              <img src="{{ asset('img/doctor.png') }} ">
+              <img src="{{ asset('/images/catalog/'. $doctor->picture) }} ">
             </div>
             <div class="content">
               <a class="header">{{ $doctor->name }} </a>
               <div class="meta">
-                <span class="date">Joined in {{ $doctor->c923reated_at }} </span>
+                <span class="date">Joined in {{ $doctor->created_at }} </span>
               </div>
               <div class="description">
-                {{ $doctor->description }}
+                Speciality: {{ $doctor->speciality }}
               </div>
             </div>
             <div class="extra content">

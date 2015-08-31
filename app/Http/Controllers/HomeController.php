@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Doctor;
-//use App\Manager;
+use App\Manager;
 
 class HomeController extends Controller
 {

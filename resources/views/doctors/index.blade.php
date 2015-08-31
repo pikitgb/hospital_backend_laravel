@@ -7,6 +7,8 @@
       <br />
       <h1> Listing Doctors </h1>
       <hr />
+      <a href="{{ action('DoctorsController@create') }}" class="ui button primary">Create new doctor</a>
+
       <table class="ui celled table">
         <thead>
           <tr>
