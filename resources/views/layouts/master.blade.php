@@ -138,6 +138,9 @@
               <i class="sidebar icon"></i>
             </a>
             <a class="active item" href="{{ url('/') }}">Home</a>
+            <a class="item" href="{{ action('HomeController@dashboard') }}">Dashboard</a>
+
+
             <div class="right item">
               @if (!Auth::check())
                 <a class="ui inverted button" href="/auth/login">Log in</a>

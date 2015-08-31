@@ -36,7 +36,7 @@
         </div>
         <div class="row">
           <div class="center aligned column">
-            <a class="ui huge button">Check the dashboard project</a>
+            <a class="ui huge button" href="{{ action('HomeController@dashboard') }}">Check the dashboard project</a>
           </div>
         </div>
       </div>
