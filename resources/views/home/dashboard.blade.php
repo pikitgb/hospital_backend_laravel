@@ -7,63 +7,56 @@
     <h1>Welcome to the HospitalCity Backend</h1>
     <hr />
   </div>
-
 @stop
 
 @section('content')
-
   <div class="ui two column grid container">
-
     <div class="four wide column">
-
       <div class="ui people shape">
         <div class="sides">
           <div class="side">
             <div class="ui card">
               <div class="image">
-                <img src="img/doctor3.png">
+                <img src="{{ url('images/catalog/'.$doctor_1->picture) }}">
               </div>
               <div class="content">
-                <div class="header">Last doctor reported</div>
+                <div class="header">Last doctor created</div>
                 <div class="meta">
-                  <a>Doctor Name</a>
+                  <a>{{ $doctor_1->name }} </a>
                 </div>
                 <div class="description">
-                  Current possition: 1268 W 29th PL, Hialeah FL, 33010
+                  Current position: 1268 W 29th PL, Hialeah FL, 33010
                 </div>
               </div>
               <div class="extra content">
                 <span class="right floated">
-                  Reported at: 1 hour ago
-                </span>
-                <span>
-                  <i class="user icon"></i>
-                  1511 Cases
+                  Created at: {{ $doctor_1->created_at }}
                 </span>
               </div>
             </div>
           </div>
           <div class="side active">
+
             <div class="ui card">
               <div class="image">
-                <img src="img/doctor2.png">
+                <img src="{{ url('images/catalog/'.$doctor_2->picture) }}">
               </div>
               <div class="content">
-                <a class="header">Stevie Feliciano</a>
+                <div class="header">Last doctor created</div>
                 <div class="meta">
-                  <span class="date">Joined in 2014</span>
+                  <a>{{ $doctor_2->name }} </a>
                 </div>
                 <div class="description">
-                  Stevie Feliciano is a library scientist living in New York City. She likes to spend her time reading, running, and writing.
+                  Current position: 1268 W 29th PL, Hialeah FL, 33010
                 </div>
               </div>
               <div class="extra content">
-                <a>
-                  <i class="user icon"></i>
-                  22 Friends
-                </a>
+                <span class="right floated">
+                  Created at: {{ $doctor_2->created_at }}
+                </span>
               </div>
             </div>
+
           </div>
         </div>
       </div>
@@ -87,22 +80,17 @@
 
       <div style="margin-left: 20px">
         <div id="map" style="width: 780px; height: 470px; border-radius: 10px"></div>
-
         <script type="text/javascript">
            var map = new GMap2(document.getElementById("map"));
            map.setCenter(new GLatLng(51.49, -0.12), 13);
         </script>
       </div>
-
     </div>
-
-
   </div>
 
   <script type="text/javascript" charset="utf-8">
     $('.shape').shape('flip up');
   </script>
-
 @stop
 
 @section('footer')

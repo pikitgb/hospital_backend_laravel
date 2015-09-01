@@ -27,7 +27,7 @@
                 <a href="{{  url('doctors', ['id' => $doctor->id]) }}" class="ui primary button">Show</a>
               </td>
               <td>
-                <a href="" class="ui orange button">Edit</a>
+                <a href="{{ action('DoctorsController@edit', ['id' => $doctor->id]) }}" class="ui orange button">Edit</a>
               </td>
             </tr>
           @endforeach

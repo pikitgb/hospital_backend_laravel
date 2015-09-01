@@ -88,8 +88,9 @@ class DoctorsController extends Controller
    */
   public function show($id)
   {
-    $doctor = Doctor::find($id);
-    return view('doctors.show', ['doctor' => $doctor]);
+    $doctor = Doctor::findOrFail($id);
+    // return view('doctors.show', ['doctor' => $doctor]);
+    return view('doctors.show')->withDoctor($doctor);
   }
 
   /**
@@ -100,7 +101,8 @@ class DoctorsController extends Controller
    */
   public function edit($id)
   {
-    //
+    $doctor = Doctor::findOrFail($id);
+    return view('doctors.edit', ['doctor' => $doctor]);
   }
 
   /**
@@ -112,7 +114,9 @@ class DoctorsController extends Controller
    */
   public function update(Request $request, $id)
   {
-    //
+    $doctor = Doctor::find($id);
+    $doctor->update($request->all());
+    return redirect('doctors/'.$doctor->id);
   }
 
   /**

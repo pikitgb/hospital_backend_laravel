@@ -24,7 +24,12 @@
               <div class="description">
                 Speciality: {{ $doctor->speciality }}
               </div>
+              <hr />
+              <div class="description">
+                <a href="{{ route('doctors.edit', $doctor->id)  }}" class="ui button orange fluid">Edit</a>
+              </div>
             </div>
+
             <div class="extra content">
               <a>
                 <i class="info icon"></i>

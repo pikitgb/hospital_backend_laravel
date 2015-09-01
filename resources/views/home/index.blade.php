@@ -1,8 +1,6 @@
 @extends('layouts.master')
 
 @section('presentation')
-
-
   <center>
   <div class="ui container center">
     <br />
